@@ -1,6 +1,19 @@
 import React from "react";
-import { Layout } from "../components/layout";
+import { Elevation } from "../components/elevation";
+import { LayoutPage } from "../components/layout";
+import { MapPage } from "../components/map";
 
 export const Index = () => {
-  return <Layout>Main</Layout>;
+  return (
+    <LayoutPage>
+      <main className="flex column">
+        <section className="none map">
+          <MapPage />
+        </section>
+        <section className="auto elevation">
+          <Elevation />
+        </section>
+      </main>
+    </LayoutPage>
+  );
 };
